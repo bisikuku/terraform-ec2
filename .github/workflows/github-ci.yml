@@ -43,7 +43,6 @@ jobs:
         tf_actions_version: 0.12.13
         tf_actions_subcommand: 'plan'
         tf_actions_working_dir: '.'
-      env:
         AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
     - name: 'Terraform Apply'
@@ -52,6 +51,5 @@ jobs:
         tf_actions_version: 0.12.13
         tf_actions_subcommand: 'apply'
         tf_actions_working_dir: '.'
-      env:
         AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
