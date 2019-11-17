@@ -7,6 +7,8 @@ jobs:
     name: 'Plan'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v1
       - name: 'Terraform Plan'
         uses: hashicorp/terraform-github-actions@master
         with:
