@@ -14,8 +14,8 @@ jobs:
           tf_actions_version: 0.12.13
           tf_actions_subcommand: 'validate'
         env:
-          TF_VAR_AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-          TF_VAR_AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          TF_VAR_AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          TF_VAR_AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   plan:
     name: 'Plan'
     runs-on: ubuntu-latest
@@ -27,5 +27,5 @@ jobs:
           tf_actions_version: 0.12.13
           tf_actions_subcommand: 'plan'
         env:
-          TF_VAR_AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-          TF_VAR_AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          TF_VAR_AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          TF_VAR_AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
